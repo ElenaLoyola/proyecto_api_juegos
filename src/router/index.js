@@ -1,11 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/HomeView.vue';
+import NotFound from '@/components/NotFound.vue';
+import OpinionesView from '@/views/OpinionesView.vue';
+import Administracion from '@/components/Administracion.vue';
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path:'/opiniones/:nombre',
+    name: 'opiniones',
+    component: OpinionesView,
+    props: true,
+  },
+  {
+    path:'/administracion/:nombre',
+    name:'administracion',
+    component: Administracion,
+    props: true,
   },
   {
     path: '/about',
@@ -16,6 +31,11 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     }
+  },
+  {
+    path:'/:catchAll(.*)',
+    name: 'notfound',
+    component: NotFound
   }
 ]
 

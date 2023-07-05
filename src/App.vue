@@ -1,7 +1,11 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <h4>Games Opinion <i class="fa-solid fa-gamepad" style="color: #ffffff;"></i></h4>
+    <div>
+      <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
   </nav>
   <router-view/>
 </template>
@@ -17,14 +21,27 @@
 
 nav {
   padding: 30px;
+  background-color: black;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
+h4 {
+  color: white;
+  margin-bottom: 0px;
+}
+i {
+  margin-right: 5px;
+  margin-left: 5px;
+}
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
+  text-decoration: none;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: cornflowerblue;
 }
 </style>

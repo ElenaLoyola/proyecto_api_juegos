@@ -1,4 +1,4 @@
-# proyecto_api_juegos
+# practica_consolidacion_games_opinion
 
 ## Project setup
 ```

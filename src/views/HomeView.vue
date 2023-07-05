@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2>Lista de Juegos Disponibles</h2>
+    <Juegos></Juegos>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Juegos from '@/components/Juegos.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    Juegos
   }
 }
 </script>
+
+<style scoped>
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+</style>
